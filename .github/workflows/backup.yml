@@ -1,0 +1,61 @@
+name: Antirot - Backups
+
+on:
+  schedule:
+    - cron: '30 3 * * *'   # daily, 03:30 UTC
+  workflow_dispatch:
+    inputs:
+      keep:
+        description: 'Remote backup copies to keep'
+        required: false
+        default: '7'
+
+env:
+  PYTHON_VERSION: '3.11'
+  TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+  TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+  HF_TOKEN: ${{ secrets.HF_TOKEN }}
+  BACKUP_REPO: ${{ secrets.BACKUP_REPO }}
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Restore golden layer + crawl state
+        uses: actions/cache@v4
+        with:
+          path: |
+            search/data/local.db
+            search/data/crawl_state.json
+            search/data/crawl_schedule.json
+            search/data/crawl_stats.json
+            search/data/content_changes.json
+            search/data/content_removals.json
+          key: antirot-state-${{ github.run_id }}
+          restore-keys: |
+            antirot-state-
+
+      - name: Install dependencies
+        run: pip install -r search/requirements.txt
+
+      - name: Export + snapshot + upload
+        run: python -m search.backup --keep "${{ github.event.inputs.keep || '7' }}"
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: golden-layer-backup-${{ github.run_number }}
+          path: |
+            search/data/backup_*.jsonl.gz
+            search/data/snapshot_*.db
+          retention-days: 30
+          if-no-files-found: ignore

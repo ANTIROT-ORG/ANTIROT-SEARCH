@@ -1,0 +1,101 @@
+name: Antirot - Wikipedia Dump Ingest
+
+on:
+  schedule:
+    - cron: '0 4 * * 0'   # weekly, Sunday 04:00 UTC
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Articles to import'
+        required: false
+        default: '500'
+      mode:
+        description: 'random (uniform sample) or index (pageid-ordered prefix)'
+        required: false
+        type: choice
+        options: [random, index]
+        default: random
+      seed:
+        description: 'Random seed (reproducible samples)'
+        required: false
+        default: '42'
+      lang:
+        description: 'Wikipedia language code'
+        required: false
+        default: 'en'
+
+env:
+  PYTHON_VERSION: '3.11'
+  TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+  TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+  HF_TOKEN: ${{ secrets.HF_TOKEN }}
+  HF_DATASET_REPO: ${{ secrets.HF_DATASET_REPO }}
+  MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Restore golden layer + crawl state
+        uses: actions/cache@v4
+        with:
+          path: |
+            search/data/local.db
+            search/data/crawl_state.json
+            search/data/crawl_schedule.json
+            search/data/crawl_stats.json
+            search/data/content_changes.json
+            search/data/content_removals.json
+          key: antirot-state-${{ github.run_id }}
+          restore-keys: |
+            antirot-state-
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust_search
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r search/requirements.txt
+
+      - name: Build Tantivy serving index
+        run: cargo build --release --manifest-path rust_search/Cargo.toml
+
+      - name: Import Wikipedia dump articles
+        run: |
+          MODE="${{ github.event.inputs.mode || 'random' }}"
+          if [ "$MODE" = "random" ]; then
+            python -m search.wiki_dump --random \
+              --limit "${{ github.event.inputs.limit || '500' }}" \
+              --seed "${{ github.event.inputs.seed || '42' }}" \
+              --lang "${{ github.event.inputs.lang || 'en' }}"
+          else
+            python -m search.wiki_dump \
+              --limit "${{ github.event.inputs.limit || '500' }}" \
+              --lang "${{ github.event.inputs.lang || 'en' }}"
+          fi
+
+      - name: Filter + index (no live crawl)
+        env:
+          CRAWL_SKIP_CRAWL: 'true'
+          RATSEARCH_TANTIVY_BIN: rust_search/target/release/ratsearch-index
+          RATSEARCH_TANTIVY_INDEX: search/data/tantivy
+        run: python -m search.pipeline
+
+      - name: Upload Tantivy index
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tantivy-index-wiki-${{ github.run_number }}
+          path: search/data/tantivy/
+          retention-days: 14
+          if-no-files-found: ignore
