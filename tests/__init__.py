@@ -1,1 +1,1 @@
-from .rat.database import Database
+# RatCrawler test suite

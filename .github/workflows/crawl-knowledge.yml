@@ -1,0 +1,95 @@
+name: Antirot - Knowledge Pipeline
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Source category to crawl'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - knowledge_foundations
+          - science_research
+          - university_learning
+          - programming_engineering
+          - data_economics
+          - deep_thinking
+
+env:
+  PYTHON_VERSION: '3.11'
+  TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+  TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+  HF_TOKEN: ${{ secrets.HF_TOKEN }}
+  HF_DATASET_REPO: ${{ secrets.HF_DATASET_REPO }}
+  MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Restore golden layer + crawl state
+        uses: actions/cache@v4
+        with:
+          path: |
+            search/data/local.db
+            search/data/crawl_state.json
+            search/data/crawl_schedule.json
+            search/data/crawl_stats.json
+            search/data/content_changes.json
+            search/data/content_removals.json
+          key: antirot-state-${{ github.run_id }}
+          restore-keys: |
+            antirot-state-
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust_search
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r search/requirements.txt
+
+      - name: Build Tantivy serving index
+        run: cargo build --release --manifest-path rust_search/Cargo.toml
+
+      - name: Run full pipeline
+        env:
+          CRAWL_CATEGORY: ${{ github.event.inputs.category || 'all' }}
+          CRAWL_PRIORITY: '1'
+          RATSEARCH_TANTIVY_BIN: rust_search/target/release/ratsearch-index
+          RATSEARCH_TANTIVY_INDEX: search/data/tantivy
+        run: python -m search.pipeline
+
+      - name: Upload to HuggingFace
+        if: env.HF_TOKEN != ''
+        run: python -m search.indexers.hf_uploader
+
+      - name: Upload Tantivy index
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tantivy-index-${{ github.run_number }}
+          path: search/data/tantivy/
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: search-data-${{ github.run_number }}
+          path: search/data/
+          retention-days: 14

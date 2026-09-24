@@ -1,0 +1,6 @@
+{
+  "extends": "astro/scripts/commands.mjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "astro"
+}

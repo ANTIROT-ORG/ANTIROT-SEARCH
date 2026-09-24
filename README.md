@@ -669,31 +669,110 @@ CRAWLER_MAX_RETRIES=3
 
 ---
 
-## 🧪 **Testing**
+## 🔎 **ANTIROT — the search engine**
 
-Run the comprehensive test suite:
+This repo also hosts **Antirot** (formerly *Capybara*, earlier *RatSearch*): a Google-style,
+classical-IR search engine over
+curated human knowledge — BM25/FTS5, PageRank, SimHash. No neural nets, and no
+AI-generated content is ever indexed.
+
+**Pipeline:** crawl (robots UA-groups, sitemaps, conditional GET, freshness
+scheduler) → quality signals → **AI-slop gate** → FTS5/BM25 golden layer →
+federated serving (Astro + optional Tantivy) → SERP.
+
+### SERP features
+
+- **Knowledge panel** — Wikidata claims (occupation, employer, born/died, …),
+  image and multilingual sitelinks; cached locally in `knowledge_entities` (7-day TTL)
+- **Featured answer**, **People also ask**, per-result **sitelinks**, **related searches**
+- **Dictionary card** (DuckDuckGo-style) — single-word lookups get definitions
+  by part of speech, IPA phonetics and a 🔊 pronunciation speaker
+  (Wiktionary-backed, audio via `/api/dict/audio`)
+- **Did-you-mean** spelling suggestions (curated map + edit distance)
+- **Query operators**: `"exact phrase"`, `-exclude`, `site:example.com`,
+  `filetype:pdf`, `after:YYYY-MM-DD`, `before:YYYY-MM-DD`, plus a
+  `when=day|week|month|year` recency filter — rendered as removable chips,
+  deep-linkable via `?q=…&vertical=…&when=…`
+- **Live providers** — a Brave-style meta search over free APIs (Hacker News,
+  Stack Exchange, Wikipedia, plus Common Crawl CDX for `site:`), merged with the
+  local index; no page storage, warm in <50ms
+- **Trusted human sources, scraped on schedule** — tech news (404 Media, Ars,
+  The Verge, Wired, TechCrunch, Lobsters, MIT Tech Review), journals (Nature,
+  Quanta), health (WHO, NHS, Cochrane), Reddit trends, 14 human YouTube
+  channels, and GitHub repos — all through the same AI-slop gate
+- **Progressive loading** — the ranked top-5 + knowledge panel paint first,
+  then the full result set streams in below
+- **Verticals**: All · Photos · Videos · News · Code (federated providers;
+  social platforms and AI content farms hard-blocked)
+- **Domain diversity**: max 2 results per host in the top 10
+
+### AI-slop gate — never indexed, no matter what (4 layers)
+
+1. Pipeline filter splits `filtered_*.jsonl` vs `slop_*.jsonl`; the verdict is
+   carried on every accepted item
+2. `upsert_knowledge_item` hard-fails on slop (re-analyzing inline when no
+   verdict is carried) — covers every ingest path: pipeline, wiki crawlers,
+   Common Crawl/Wikipedia dumps, backup restore; persists
+   `slop_score` / `slop_verdict` / `slop_signals`
+3. `slop_rejects` audit table + `python -m search.purge_slop [--dry-run]`
+   re-screens and purges anything already indexed
+4. Query-time rescreen hard-drops AI-disclosure, clickbait and deny-listed results
+
+### Run it
 
 ```bash
-# All tests
-pytest tests/ -v
+# Full pipeline: crawl → filter → gate → index → Tantivy sync
+python -m search.pipeline
+CRAWL_SKIP_CRAWL=true python -m search.pipeline   # index pending data only
 
-# Specific test categories
-pytest tests/test_crawler.py -v          # Crawler tests
-pytest tests/test_backlink.py -v         # Backlink analysis tests
-pytest tests/test_monitoring.py -v       # Monitoring tests
-pytest tests/test_integration.py -v      # Integration tests
+# Re-screen everything already indexed (start with --dry-run)
+python -m search.purge_slop --dry-run
 
-# Performance tests
-pytest tests/test_performance.py -v --benchmark-only
+# Fill missing published dates (JSONL / sitemap / HTTP Last-Modified sources)
+python -m search.backfill_dates --dry-run
+
+# SERP + API (http://localhost:4321)
+cd web && npm install && npm run dev
 ```
+
+API: `GET /api/search?q=…&vertical=all&when=any` · `GET /api/suggest` ·
+`GET /api/stats` · interactive docs at `/api-docs`.
+
+Docs: [search/STRATEGY.md](search/STRATEGY.md) ·
+Tantivy index: [rust_search/README.md](rust_search/README.md) ·
+Monitoring: [MONITORING_README.md](MONITORING_README.md)
+
+---
+
+## 🧪 **Testing**
+
+Run the test suite:
+
+```bash
+# Python: slop gate, golden layer, dedup, ingest parsers (52 tests)
+python -m pytest tests/test_capybara.py -v
+
+# Ranking regression harness (NDCG@10 / MRR on a fixed 15-query set)
+python -m search.eval --json
+
+# Web: query operators, did-you-mean, people-also-ask, answer + dictionary selection (40 tests)
+cd web && npm install && npm test
+
+# Type check
+cd web && npm run check
+```
+
+All of the above runs in CI on every push/PR via
+`.github/workflows/test.yml` (alongside the scheduled crawl/backup/ingest
+workflows).
 
 **Test Coverage:**
 
-- ✅ Unit tests for all core modules
-- ✅ Integration tests for end-to-end workflows
-- ✅ Performance benchmarks
-- ✅ Database schema validation
-- ✅ API endpoint testing
+- ✅ Slop-gate enforcement: index-time hard fail, audit trail, purge CLI
+- ✅ FTS5/BM25 indexing, sync triggers, SimHash near-duplicates, PageRank
+- ✅ Query operators, row filters, spelling, PAA, featured-answer selection
+- ✅ Robots/sitemap parsing, Common Crawl + Wikipedia dump ingest, backups
+- ✅ Ranking regression (NDCG@10 / MRR) and eval metric math
 
 ---
 

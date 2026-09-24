@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { openapiSpec } from '../data/openapi';
+
+const spec: any = openapiSpec;
+
+const examples: Record<string, string> = {
+  '/api/search': 'curl "http://localhost:4321/api/search?q=climate%20change&vertical=all&limit=10"',
+  '/api/suggest': 'curl "http://localhost:4321/api/suggest?q=clim&limit=5"',
+  '/api/stats': 'curl "http://localhost:4321/api/stats"',
+  '/api/categories': 'curl "http://localhost:4321/api/categories"',
+  '/api/openapi.json': 'curl "http://localhost:4321/api/openapi.json"',
+};
+
+const endpoints = Object.entries(spec.paths).map(([path, operations]: [string, any]) => {
+  const [method, operation] = Object.entries(operations)[0] as [string, any];
+  return {
+    path,
+    method: method.toUpperCase(),
+    summary: operation.summary,
+    description: operation.description || '',
+    params: operation.parameters || [],
+    example: examples[path] || '',
+  };
+});
+---
+
+<Layout title="Antirot API — Docs">
+  <main class="wrap">
+    <header class="top">
+      <a class="brand" href="/">Antirot</a>
+      <span class="tag">API v{spec.info.version}</span>
+    </header>
+
+    <h1>{spec.info.title}</h1>
+    <p class="lead">{spec.info.description}</p>
+    <p class="meta">
+      Base URL: <code>{spec.servers[0].url}</code> ·
+      <a href="/api/openapi.json">OpenAPI 3.1 spec</a> ·
+      Rate limit: <strong>30 req/min</strong> per IP on search
+    </p>
+
+    {endpoints.map((endpoint) => (
+      <section class="ep">
+        <h2>
+          <span class={`method ${endpoint.method.toLowerCase()}`}>{endpoint.method}</span>
+          <code>{endpoint.path}</code>
+        </h2>
+        <p class="summary">{endpoint.summary}</p>
+        {endpoint.description && <p class="desc">{endpoint.description}</p>}
+
+        {endpoint.params.length > 0 && (
+          <table>
+            <thead>
+              <tr><th>Parameter</th><th>In</th><th>Type</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              {endpoint.params.map((param: any) => (
+                <tr>
+                  <td><code>{param.name}</code>{param.required ? ' *' : ''}</td>
+                  <td>{param.in}</td>
+                  <td>
+                    {param.schema.type}
+                    {param.schema.enum ? ` (${param.schema.enum.join(' | ')})` : ''}
+                    {param.schema.default !== undefined ? ` = ${param.schema.default}` : ''}
+                  </td>
+                  <td>{param.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+
+        {endpoint.example && (
+          <>
+            <h3>Example</h3>
+            <pre>{endpoint.example}</pre>
+          </>
+        )}
+      </section>
+    ))}
+
+    <footer class="foot">
+      <p>
+        Results are screened by the slop gate: denied domains (social platforms,
+        AI content farms) can never appear. Query stats are aggregated without
+        IP addresses or user identifiers.
+      </p>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --bg: #09090b; --s1: #111113; --s2: #18181b; --bd: #27272a;
+    --tx: #fafafa; --tx2: #a1a1aa; --tx3: #71717a; --tx4: #52525b;
+    --ac: #10b981; --lk: #60a5fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; background: var(--bg); color: var(--tx); }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 32px 24px 80px; }
+  .top { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+  .brand { font-size: 1.3rem; font-weight: 900; text-decoration: none; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--ac), #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .tag { font-size: 0.75rem; color: var(--ac); background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.2);
+    padding: 3px 10px; border-radius: 20px; font-weight: 600; }
+  h1 { font-size: 2rem; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .lead { color: var(--tx2); line-height: 1.7; margin-bottom: 12px; }
+  .meta { color: var(--tx4); font-size: 0.85rem; margin-bottom: 36px; }
+  .meta a { color: var(--lk); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  .ep { background: var(--s1); border: 1px solid var(--bd); border-radius: 12px; padding: 20px 22px; margin-bottom: 20px; }
+  h2 { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; margin-bottom: 10px; flex-wrap: wrap; }
+  h3 { font-size: 0.8rem; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 8px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; color: var(--tx); }
+  .method { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.5px; color: #000; background: var(--ac);
+    padding: 3px 9px; border-radius: 6px; }
+  .method.get { background: #10b981; }
+  .summary { color: var(--tx); font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
+  .desc { color: var(--tx3); font-size: 0.85rem; line-height: 1.6; }
+  table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.82rem; }
+  th { text-align: left; color: var(--tx4); font-weight: 600; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--bd); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.4px; }
+  td { color: var(--tx2); padding: 8px 10px 8px 0; border-bottom: 1px solid var(--bd); vertical-align: top; line-height: 1.5; }
+  tr:last-child td { border-bottom: 0; }
+  td:first-child { white-space: nowrap; color: var(--tx); }
+  pre { background: var(--bg); border: 1px solid var(--bd); border-radius: 8px; padding: 12px 14px;
+    font-size: 0.8rem; color: var(--ac); overflow-x: auto; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .foot { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--bd); }
+  .foot p { color: var(--tx4); font-size: 0.8rem; line-height: 1.7; }
+</style>

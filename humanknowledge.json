@@ -1,0 +1,1923 @@
+{
+  "metadata": {
+    "title": "Human Knowledge Websites",
+    "description": "Websites that share authentic human-created, human-curated, or crowdsourced knowledge. No AI-generated content. Focus on human expertise, community contributions, open education, and peer-reviewed resources.",
+    "version": "1.0",
+    "last_updated": "2026-09-19"
+  },
+  "categories": {
+    "Encyclopedias_and_Knowledge_Bases": {
+      "description": "Human-edited, crowdsourced, and expert-authored encyclopedias and knowledge bases",
+      "websites": [
+        {
+          "name": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "description": "Free online encyclopedia written and maintained by a global community of volunteer editors",
+          "type": "crowdsourced_encyclopedia"
+        },
+        {
+          "name": "Citizendium",
+          "url": "https://citizendium.org/",
+          "description": "Expert-moderated online encyclopedia founded by Wikipedia co-founder Larry Sanger",
+          "type": "expert_edited_encyclopedia"
+        },
+        {
+          "name": "Britannica",
+          "url": "https://www.britannica.com/",
+          "description": "Expert-written and editorially reviewed encyclopedia articles since 1768",
+          "type": "expert_encyclopedia"
+        },
+        {
+          "name": "Scholarpedia",
+          "url": "https://www.scholarpedia.org/",
+          "description": "Open-access encyclopedia of peer-reviewed articles by scholarly experts",
+          "type": "peer_reviewed_encyclopedia"
+        },
+        {
+          "name": "Everipedia",
+          "url": "https://everipedia.org/",
+          "description": "Community-built encyclopedia with blockchain-based verification",
+          "type": "crowdsourced_encyclopedia"
+        },
+        {
+          "name": "Everything2",
+          "url": "https://everything2.com/",
+          "description": "Collaborative community repository of moderated user-generated content on a variety of topics",
+          "type": "community_repository"
+        },
+        {
+          "name": "Conservapedia",
+          "url": "https://www.conservapedia.com/",
+          "description": "User-edited encyclopedia with editorial oversight",
+          "type": "community_encyclopedia"
+        },
+        {
+          "name": "Infogalactic",
+          "url": "https://infogalactic.com/",
+          "description": "Open-source content wiki with a more open editing model than Wikipedia",
+          "type": "open_wiki"
+        }
+      ]
+    },
+    "WIKIS_and_COLLABORATIVE_KNOWLEDGE": {
+      "description": "Community-driven wikis for specific knowledge domains",
+      "websites": [
+        {
+          "name": "Wiktionary",
+          "url": "https://www.wiktionary.org/",
+          "description": "Free multilingual dictionary collaboratively edited by volunteers",
+          "type": "wiki_dictionary"
+        },
+        {
+          "name": "Wikisource",
+          "url": "https://wikisource.org/",
+          "description": "Digital library of source texts in the public domain",
+          "type": "source_text_library"
+        },
+        {
+          "name": "Wikibooks",
+          "url": "https://en.wikibooks.org/",
+          "description": "Free textbooks and manuals that anyone can edit",
+          "type": "open_textbooks"
+        },
+        {
+          "name": "Wikidata",
+          "url": "https://www.wikidata.org/",
+          "description": "Free and open knowledge base that can be read and edited by both humans and machines",
+          "type": "structured_knowledge"
+        },
+        {
+          "name": "WikiHow",
+          "url": "https://www.wikihow.com/",
+          "description": "Community-authored how-to guides with step-by-step instructions and images",
+          "type": "how_to_wiki"
+        },
+        {
+          "name": "RationalWiki",
+          "url": "https://rationalwiki.org/",
+          "description": "Collaborative wiki documenting pseudoscience and analyzing claims",
+          "type": "critical_thinking_wiki"
+        },
+        {
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "description": "Community blog focused on rationality and decision-making",
+          "type": "rationality_community"
+        },
+        {
+          "name": "Appropedia",
+          "url": "https://www.appropedia.org/",
+          "description": "Open-source solutions for sustainability, appropriate technology, and development",
+          "type": "sustainability_wiki"
+        },
+        {
+          "name": "WikiIndex",
+          "url": "https://wikiindex.org/",
+          "description": "Directory for all wikis on the web, cataloging over 21,000 wiki sites",
+          "type": "wiki_directory"
+        },
+        {
+          "name": "Community Wiki",
+          "url": "https://www.communitywiki.org/",
+          "description": "Community wiki exploring diverse topics related to community building",
+          "type": "community_wiki"
+        }
+      ]
+    },
+    "Open_Access_Research_and_Scholarship": {
+      "description": "Open access journals, preprint servers, and research repositories",
+      "websites": [
+        {
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "description": "Open-access archive for scholarly articles in physics, mathematics, CS, and more since 1991",
+          "type": "preprint_server"
+        },
+        {
+          "name": "bioRxiv",
+          "url": "https://www.biorxiv.org/",
+          "description": "Open access preprint server for biology",
+          "type": "preprint_server"
+        },
+        {
+          "name": "medRxiv",
+          "url": "https://www.medrxiv.org/",
+          "description": "Open access preprint server for health sciences",
+          "type": "preprint_server"
+        },
+        {
+          "name": "OSF Preprints",
+          "url": "https://osf.io/preprints",
+          "description": "Aggregator of preprint servers across disciplines",
+          "type": "preprint_aggregator"
+        },
+        {
+          "name": "Preprints.org",
+          "url": "https://www.preprints.org/",
+          "description": "Multidisciplinary platform for preprinting research",
+          "type": "preprint_server"
+        },
+        {
+          "name": "JSTOR Open Access",
+          "url": "https://about.jstor.org/open-access/",
+          "description": "Digitized academic journals, books, and primary sources with open access content",
+          "type": "academic_archive"
+        },
+        {
+          "name": "Directory of Open Access Journals (DOAJ)",
+          "url": "https://doaj.org/",
+          "description": "Directory of open access journals covering 14,000+ journals",
+          "type": "oa_directory"
+        },
+        {
+          "name": "Directory of Open Access Books (DOAB)",
+          "url": "https://www.doabooks.org/",
+          "description": "Directory of open access peer-reviewed books",
+          "type": "oa_directory"
+        },
+        {
+          "name": "OpenAlex",
+          "url": "https://openalex.org/",
+          "description": "Open catalog of the global research system indexing half a billion scholarly works",
+          "type": "research_catalog"
+        },
+        {
+          "name": "CORE",
+          "url": "https://core.ac.uk/",
+          "description": "Aggregator of open access research papers and data from repositories worldwide",
+          "type": "oa_aggregator"
+        },
+        {
+          "name": "Semantic Scholar",
+          "url": "https://www.semanticscholar.org/",
+          "description": "AI-powered academic search engine with free access to research papers",
+          "type": "academic_search"
+        },
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "description": "Freely accessible search engine for scholarly literature",
+          "type": "academic_search"
+        },
+        {
+          "name": "PubMed Central",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/",
+          "description": "Free archive of biomedical and life sciences journal literature",
+          "type": "oa_repository"
+        },
+        {
+          "name": "Europe PMC",
+          "url": "https://europepmc.org/",
+          "description": "European open access archive for life sciences research",
+          "type": "oa_repository"
+        },
+        {
+          "name": "PLOS ONE",
+          "url": "https://journals.plos.org/plosone/",
+          "description": "Peer-reviewed open access scientific journal",
+          "type": "oa_journal"
+        },
+        {
+          "name": "MDPI Open Access",
+          "url": "https://www.mdpi.com/",
+          "description": "Publisher of peer-reviewed open access journals across all disciplines",
+          "type": "oa_publisher"
+        },
+        {
+          "name": "Frontiers",
+          "url": "https://www.frontiersin.org/",
+          "description": "Open access publisher of peer-reviewed scientific articles",
+          "type": "oa_publisher"
+        },
+        {
+          "name": "PeerJ",
+          "url": "https://peerj.com/",
+          "description": "Open access journal publishing peer-reviewed research in life sciences and medicine",
+          "type": "oa_journal"
+        }
+      ]
+    },
+    "Open_Education_and_Free_Courses": {
+      "description": "Free courses, open courseware, and educational platforms",
+      "websites": [
+        {
+          "name": "MIT OpenCourseWare",
+          "url": "https://ocw.mit.edu/",
+          "description": "Free online course materials from MIT's undergraduate and graduate curriculum",
+          "type": "open_courseware"
+        },
+        {
+          "name": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "description": "Free world-class education for anyone, anywhere - human-taught courses",
+          "type": "free_education"
+        },
+        {
+          "name": "OpenStax",
+          "url": "https://openstax.org/",
+          "description": "Non-profit creating free, peer-reviewed, open-access college textbooks",
+          "type": "open_textbooks"
+        },
+        {
+          "name": "edX",
+          "url": "https://www.edx.org/",
+          "description": "Open online courses from universities and institutions worldwide",
+          "type": "mooc_platform"
+        },
+        {
+          "name": "Coursera",
+          "url": "https://www.coursera.org/",
+          "description": "Online courses from top universities and companies worldwide",
+          "type": "mooc_platform"
+        },
+        {
+          "name": "freeCodeCamp",
+          "url": "https://www.freecodecamp.org/",
+          "description": "Non-profit helping people learn to code through free, interactive lessons and projects",
+          "type": "coding_education"
+        },
+        {
+          "name": "The Open University (OpenLearn)",
+          "url": "https://www.open.edu/openlearn/",
+          "description": "Free learning resources from the UK Open University",
+          "type": "open_courseware"
+        },
+        {
+          "name": "Yale Open Courses",
+          "url": "https://oyc.yale.edu/",
+          "description": "Free video lectures from Yale University professors",
+          "type": "open_courseware"
+        },
+        {
+          "name": "Stanford Online",
+          "url": "https://online.stanford.edu/free-courses",
+          "description": "Free online courses from Stanford University",
+          "type": "open_courseware"
+        },
+        {
+          "name": "Udacity",
+          "url": "https://www.udacity.com/",
+          "description": "Online courses in technology and skills with free options",
+          "type": "online_education"
+        },
+        {
+          "name": "Udemy",
+          "url": "https://www.udemy.com/",
+          "description": "Online learning platform with human-created courses on diverse topics",
+          "type": "online_education"
+        },
+        {
+          "name": "Carnegie Mellon OLI",
+          "url": "https://oli.cmu.edu/",
+          "description": "Open and free online courses from Carnegie Mellon University",
+          "type": "open_courseware"
+        },
+        {
+          "name": "W3Schools",
+          "url": "https://www.w3schools.com/",
+          "description": "Free tutorials for web development languages and technologies",
+          "type": "coding_tutorials"
+        },
+        {
+          "name": "The Odin Project",
+          "url": "https://www.theodinproject.com/",
+          "description": "Free full-stack coding curriculum built by the community",
+          "type": "coding_education"
+        },
+        {
+          "name": "Codecademy",
+          "url": "https://www.codecademy.com/",
+          "description": "Interactive coding lessons with free tier options",
+          "type": "coding_education"
+        },
+        {
+          "name": "Project Euler",
+          "url": "https://projecteuler.net/",
+          "description": "Challenging mathematical/computer programming problems solved through human reasoning",
+          "type": "math_coding_challenges"
+        },
+        {
+          "name": "OER Commons",
+          "url": "https://oercommons.org/",
+          "description": "Free teaching and learning materials shared by educators",
+          "type": "oer_platform"
+        },
+        {
+          "name": "Merlot",
+          "url": "https://www.merlot.org/",
+          "description": "Free peer-reviewed open educational resources for teaching and learning",
+          "type": "oer_platform"
+        }
+      ]
+    },
+    "Digital_Libraries_and_Archives": {
+      "description": "Digital libraries, book archives, and preservation projects",
+      "websites": [
+        {
+          "name": "Internet Archive",
+          "url": "https://archive.org/",
+          "description": "Non-profit digital library with millions of free books, movies, software, music, and websites",
+          "type": "digital_library"
+        },
+        {
+          "name": "Open Library",
+          "url": "https://openlibrary.org/",
+          "description": "Project of Internet Archive - one web page for every book ever published",
+          "type": "digital_library"
+        },
+        {
+          "name": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "description": "Digital library of over 70,000 free eBooks - the oldest digital library",
+          "type": "ebook_archive"
+        },
+        {
+          "name": "Standard Ebooks",
+          "url": "https://standardebooks.org/",
+          "description": "Free and liberated eBooks, carefully prepared with human typography and design",
+          "type": "ebook_archive"
+        },
+        {
+          "name": "LibriVox",
+          "url": "https://librivox.org/",
+          "description": "Free public domain audiobooks read by volunteers",
+          "type": "audiobook_archive"
+        },
+        {
+          "name": "HathiTrust Digital Library",
+          "url": "https://www.hathitrust.org/",
+          "description": "Digital preservation repository of millions of titles from academic and research libraries",
+          "type": "digital_library"
+        },
+        {
+          "name": "Google Books",
+          "url": "https://books.google.com/",
+          "description": "Search engine for books including free public domain works",
+          "type": "book_search"
+        },
+        {
+          "name": "Perseus Digital Library",
+          "url": "http://www.perseus.tufts.edu/",
+          "description": "Digital library for classics and historical texts",
+          "type": "classics_archive"
+        },
+        {
+          "name": "World Digital Library",
+          "url": "https://www.wdl.org/",
+          "description": "UNESCO project providing free access to significant primary materials from cultures worldwide",
+          "type": "cultural_archive"
+        },
+        {
+          "name": "Project MUSE",
+          "url": "https://muse.jhu.edu/",
+          "description": "Open access humanities and social sciences scholarly content",
+          "type": "academic_archive"
+        },
+        {
+          "name": "Europeana",
+          "url": "https://www.europeana.eu/",
+          "description": "Portal to millions of digitized cultural heritage objects from European libraries, archives, and museums",
+          "type": "cultural_archive"
+        },
+        {
+          "name": "Gallica (BnF)",
+          "url": "https://gallica.bnf.fr/",
+          "description": "Digital library of the Bibliothèque nationale de France with millions of documents",
+          "type": "national_library"
+        },
+        {
+          "name": "Library of Congress Digital Collections",
+          "url": "https://www.loc.gov/collections/",
+          "description": "Digital collections from the world's largest library",
+          "type": "national_library"
+        },
+        {
+          "name": "Smithsonian Open Access",
+          "url": "https://www.si.edu/openaccess",
+          "description": "Free to use digital assets from all Smithsonian museums, research centers, and libraries",
+          "type": "museum_archive"
+        }
+      ]
+    },
+    "Encyclopedic_Reference_and_Special_Knowledge": {
+      "description": "Subject-specific reference works and specialized knowledge bases",
+      "websites": [
+        {
+          "name": "Stanford Encyclopedia of Philosophy",
+          "url": "https://plato.stanford.edu/",
+          "description": "Free, peer-reviewed reference work covering philosophy by expert scholars",
+          "type": "philosophy_reference"
+        },
+        {
+          "name": "Internet Encyclopedia of Philosophy",
+          "url": "https://iep.utm.edu/",
+          "description": "Free peer-reviewed academic encyclopedia of philosophy",
+          "type": "philosophy_reference"
+        },
+        {
+          "name": "MathWorld",
+          "url": "https://mathworld.wolfram.com/",
+          "description": "Comprehensive mathematics resource created by Eric Weisstein",
+          "type": "math_reference"
+        },
+        {
+          "name": "Encyclopedia of Mathematics",
+          "url": "https://encyclopediaofmath.org/",
+          "description": "Large reference encyclopedia in mathematics maintained by the mathematics community",
+          "type": "math_reference"
+        },
+        {
+          "name": "MacTutor History of Mathematics",
+          "url": "https://mathshistory.st-andrews.ac.uk/",
+          "description": "History of mathematics archive from St Andrews University",
+          "type": "math_history"
+        },
+        {
+          "name": "Encyclopedia of Life",
+          "url": "https://eol.org/",
+          "description": "Global collaboration to gather knowledge about all known species on Earth",
+          "type": "biology_reference"
+        },
+        {
+          "name": "Biodiversity Heritage Library",
+          "url": "https://www.biodiversitylibrary.org/",
+          "description": "Open access archive of biodiversity literature and botanical illustrations",
+          "type": "biology_archive"
+        },
+        {
+          "name": "Natural History Museum - Data Portal",
+          "url": "https://data.nhm.ac.uk/",
+          "description": "Open data from the Natural History Museum London",
+          "type": "biodiversity_data"
+        },
+        {
+          "name": "Paleobiology Database",
+          "url": "https://paleobiodb.org/",
+          "description": "Public database of paleontological data built by community of scientists",
+          "type": "paleontology_database"
+        },
+        {
+          "name": "NIST Chemistry WebBook",
+          "url": "https://webbook.nist.gov/",
+          "description": "Free reference data on chemical compounds, spectra, and thermodynamic properties",
+          "type": "chemistry_reference"
+        },
+        {
+          "name": "PubChem",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/",
+          "description": "Free chemistry database maintained by the National Center for Biotechnology Information",
+          "type": "chemistry_database"
+        },
+        {
+          "name": "Physics Info",
+          "url": "https://physics.info/",
+          "description": "Free physics reference organized as a textbook-style resource",
+          "type": "physics_reference"
+        },
+        {
+          "name": "AllAboutCircuits",
+          "url": "https://www.allaboutcircuits.com/",
+          "description": "Free open-source textbook and community for electronics engineering",
+          "type": "electronics_reference"
+        },
+        {
+          "name": "HyperPhysics",
+          "url": "https://hyperphysics.phy-astr.gsu.edu/",
+          "description": "Concept-based physics knowledge map from Georgia State University",
+          "type": "physics_reference"
+        }
+      ]
+    },
+    "QandA_and_Community_Knowledge": {
+      "description": "Community-driven Q&A platforms where humans share expertise",
+      "websites": [
+        {
+          "name": "Stack Overflow",
+          "url": "https://stackoverflow.com/",
+          "description": "Community-driven Q&A site for computer programming questions",
+          "type": "qa_technical"
+        },
+        {
+          "name": "Stack Exchange Network",
+          "url": "https://stackexchange.com/",
+          "description": "Network of 180+ Q&A communities on diverse topics including science, math, cooking, and more",
+          "type": "qa_network"
+        },
+        {
+          "name": "Super User",
+          "url": "https://superuser.com/",
+          "description": "Q&A for computer enthusiasts and power users",
+          "type": "qa_technical"
+        },
+        {
+          "name": "Server Fault",
+          "url": "https://serverfault.com/",
+          "description": "Q&A for system and network administrators",
+          "type": "qa_technical"
+        },
+        {
+          "name": "Mathematics Stack Exchange",
+          "url": "https://math.stackexchange.com/",
+          "description": "Q&A for people studying math at any level and professionals",
+          "type": "qa_math"
+        },
+        {
+          "name": "Physics Stack Exchange",
+          "url": "https://physics.stackexchange.com/",
+          "description": "Q&A for researchers, students, and enthusiasts of physics",
+          "type": "qa_science"
+        },
+        {
+          "name": "Cooking Stack Exchange",
+          "url": "https://cooking.stackexchange.com/",
+          "description": "Q&A for cooking enthusiasts and professionals",
+          "type": "qa_cooking"
+        },
+        {
+          "name": "Gardening Stack Exchange",
+          "url": "https://gardening.stackexchange.com/",
+          "description": "Q&A for gardeners and plant enthusiasts",
+          "type": "qa_gardening"
+        },
+        {
+          "name": "DIY Stack Exchange",
+          "url": "https://diy.stackexchange.com/",
+          "description": "Q&A for contractors and serious DIY enthusiasts",
+          "type": "qa_diy"
+        },
+        {
+          "name": "Ask MetaFilter",
+          "url": "https://ask.metafilter.com/",
+          "description": "Community Q&A where humans share knowledge on diverse topics",
+          "type": "qa_general"
+        },
+        {
+          "name": "Quora",
+          "url": "https://www.quora.com/",
+          "description": "Community-driven Q&A platform on diverse topics",
+          "type": "qa_general"
+        },
+        {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/",
+          "description": "Community-driven forums on diverse topics with human expertise",
+          "type": "community_forum"
+        }
+      ]
+    },
+    "Open_Source_and_Developer_Knowledge": {
+      "description": "Documentation, wikis, and knowledge bases for developers and open source projects",
+      "websites": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/",
+          "description": "Development platform for version control and collaboration - human-written code and docs",
+          "type": "dev_platform"
+        },
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/",
+          "description": "Open-source, collaborative documentation of web technologies written by humans",
+          "type": "web_docs"
+        },
+        {
+          "name": "DevDocs",
+          "url": "https://devdocs.io/",
+          "description": "Unified web developer documentation aggregator",
+          "type": "docs_aggregator"
+        },
+        {
+          "name": "Read the Docs",
+          "url": "https://about.readthedocs.com/",
+          "description": "Free documentation hosting for open-source software",
+          "type": "docs_hosting"
+        },
+        {
+          "name": "GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/",
+          "description": "Computer science portal with human-written articles on programming and algorithms",
+          "type": "cs_tutorials"
+        },
+        {
+          "name": "Rosetta Code",
+          "url": "https://rosettacode.org/",
+          "description": "Programming language comparison wiki with solutions in multiple languages",
+          "type": "programming_wiki"
+        },
+        {
+          "name": "Hacker News",
+          "url": "https://news.ycombinator.com/",
+          "description": "Community-driven tech news and knowledge sharing",
+          "type": "tech_community"
+        },
+        {
+          "name": "HackerNoon",
+          "url": "https://hackernoon.com/",
+          "description": "Human-written technology articles and tutorials",
+          "type": "tech_articles"
+        },
+        {
+          "name": "The Linux Documentation Project",
+          "url": "https://tldp.org/",
+          "description": "Free Linux knowledge base including howtos, guides, and man pages",
+          "type": "linux_docs"
+        },
+        {
+          "name": "Arch Wiki",
+          "url": "https://wiki.archlinux.org/",
+          "description": "Collaborative Linux knowledge base maintained by the Arch Linux community",
+          "type": "linux_wiki"
+        },
+        {
+          "name": "Ubuntu Wiki",
+          "url": "https://wiki.ubuntu.com/",
+          "description": "Community-maintained knowledge base for Ubuntu operating system",
+          "type": "linux_wiki"
+        },
+        {
+          "name": "Docker Docs",
+          "url": "https://docs.docker.com/",
+          "description": "Human-written documentation for container technology",
+          "type": "tech_docs"
+        }
+      ]
+    },
+    "Science_and_Research": {
+      "description": "Government and institutional science resources",
+      "websites": [
+        {
+          "name": "NASA",
+          "url": "https://www.nasa.gov/",
+          "description": "U.S. space agency with extensive human-written science knowledge",
+          "type": "gov_science"
+        },
+        {
+          "name": "USGS",
+          "url": "https://www.usgs.gov/",
+          "description": "U.S. Geological Survey - earth science, water resources, and natural hazards",
+          "type": "gov_science"
+        },
+        {
+          "name": "NOAA",
+          "url": "https://www.noaa.gov/",
+          "description": "National Oceanic and Atmospheric Administration - ocean and atmospheric science",
+          "type": "gov_science"
+        },
+        {
+          "name": "CERN",
+          "url": "https://home.cern/",
+          "description": "European Organization for Nuclear Research - particle physics and fundamental science",
+          "type": "research_institution"
+        },
+        {
+          "name": "Max Planck Society",
+          "url": "https://www.mpg.de/",
+          "description": "German research institution for fundamental science",
+          "type": "research_institution"
+        },
+        {
+          "name": "National Academies of Sciences",
+          "url": "https://www.nationalacademies.org/",
+          "description": "Independent, non-profit institutions providing expert advice on science and policy",
+          "type": "science_policy"
+        },
+        {
+          "name": "Science.gov",
+          "url": "https://www.science.gov/",
+          "description": "Gateway to U.S. federal science information",
+          "type": "science_portal"
+        },
+        {
+          "name": "Nature",
+          "url": "https://www.nature.com/",
+          "description": "Leading international science journal with open access content",
+          "type": "science_journal"
+        },
+        {
+          "name": "Science Magazine",
+          "url": "https://www.science.org/",
+          "description": "AAAS science journal with human peer-reviewed research",
+          "type": "science_journal"
+        },
+        {
+          "name": "NASA Citizen Science",
+          "url": "https://science.nasa.gov/citizen-science/",
+          "description": "Volunteer-driven NASA science projects for public participation",
+          "type": "citizen_science"
+        }
+      ]
+    },
+    "Medical_and_Health_Knowledge": {
+      "description": "Healthcare information from trusted medical sources",
+      "websites": [
+        {
+          "name": "Mayo Clinic",
+          "url": "https://www.mayoclinic.org/",
+          "description": "Expert-reviewed medical information from top-ranked medical institution",
+          "type": "medical_reference"
+        },
+        {
+          "name": "NHS (UK)",
+          "url": "https://www.nhs.uk/",
+          "description": "Free healthcare information from the National Health Service",
+          "type": "gov_health"
+        },
+        {
+          "name": "MedlinePlus",
+          "url": "https://medlineplus.gov/",
+          "description": "Health information from the U.S. National Library of Medicine and NIH",
+          "type": "gov_health"
+        },
+        {
+          "name": "WHO",
+          "url": "https://www.who.int/",
+          "description": "World Health Organization - global health information and guidelines",
+          "type": "intl_health"
+        },
+        {
+          "name": "CDC",
+          "url": "https://www.cdc.gov/",
+          "description": "Centers for Disease Control and Prevention - public health information",
+          "type": "gov_health"
+        },
+        {
+          "name": "NIH",
+          "url": "https://www.nih.gov/",
+          "description": "National Institutes of Health - biomedical and public health research",
+          "type": "gov_health"
+        },
+        {
+          "name": "WebMD",
+          "url": "https://www.webmd.com/",
+          "description": "Human-written health information reviewed by medical professionals",
+          "type": "health_information"
+        },
+        {
+          "name": "Cleveland Clinic Health Library",
+          "url": "https://health.clevelandclinic.org/",
+          "description": "Expert-reviewed health information from Cleveland Clinic",
+          "type": "medical_reference"
+        },
+        {
+          "name": "Examine.com",
+          "url": "https://examine.com/",
+          "description": "Evidence-based nutrition and supplement information from human researchers",
+          "type": "nutrition_reference"
+        },
+        {
+          "name": "Cochrane Library",
+          "url": "https://www.cochranelibrary.com/",
+          "description": "Systematic reviews of healthcare interventions by human experts",
+          "type": "evidence_based_medicine"
+        }
+      ]
+    },
+    "Legal_Knowledge": {
+      "description": "Free legal information, law databases, and legal research",
+      "websites": [
+        {
+          "name": "Cornell Legal Information Institute (LII)",
+          "url": "https://www.law.cornell.edu/",
+          "description": "Free online access to legal materials including the U.S. Constitution and federal statutes",
+          "type": "legal_reference"
+        },
+        {
+          "name": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "description": "Free legal research database from the Free Law Project with millions of court opinions",
+          "type": "legal_database"
+        },
+        {
+          "name": "GovInfo",
+          "url": "https://www.govinfo.gov/",
+          "description": "Official U.S. government publications including laws, regulations, and court opinions",
+          "type": "gov_legal"
+        },
+        {
+          "name": "Google Scholar Legal",
+          "url": "https://scholar.google.com/",
+          "description": "Free search for legal opinions and journal articles",
+          "type": "legal_search"
+        },
+        {
+          "name": "FindLaw",
+          "url": "https://www.findlaw.com/",
+          "description": "Free legal information for consumers and legal professionals",
+          "type": "legal_information"
+        },
+        {
+          "name": "Law Library of Congress",
+          "url": "https://www.loc.gov/law/",
+          "description": "Research guides and legal databases from the Library of Congress",
+          "type": "gov_legal"
+        },
+        {
+          "name": "Legal Information Institute (Wex)",
+          "url": "https://www.law.cornell.edu/wex",
+          "description": "Free legal encyclopedia with dictionary-like entries on legal concepts",
+          "type": "legal_encyclopedia"
+        }
+      ]
+    },
+    "Financial_Literacy_and_Economics": {
+      "description": "Free financial education, economics knowledge, and personal finance resources",
+      "websites": [
+        {
+          "name": "Investopedia",
+          "url": "https://www.investopedia.com/",
+          "description": "Human-written financial education covering investing, markets, and personal finance",
+          "type": "finance_education"
+        },
+        {
+          "name": "Khan Academy - Economics",
+          "url": "https://www.khanacademy.org/economics-finance-domain",
+          "description": "Free economics and finance courses taught by humans",
+          "type": "free_finance_education"
+        },
+        {
+          "name": "NerdWallet",
+          "url": "https://www.nerdwallet.com/",
+          "description": "Human-written personal finance advice and tools",
+          "type": "personal_finance"
+        },
+        {
+          "name": "Federal Reserve Education",
+          "url": "https://www.federalreserveeducation.org/",
+          "description": "Free financial literacy materials from the Federal Reserve",
+          "type": "gov_finance_education"
+        },
+        {
+          "name": "BetterInvesting",
+          "url": "https://www.betterinvesting.org/",
+          "description": "Non-profit investment education organization with free resources",
+          "type": "nonprofit_finance"
+        },
+        {
+          "name": "Oppia",
+          "url": "https://www.oppia.org/",
+          "description": "Free, open-source learning platform with finance and economics explorations",
+          "type": "open_education"
+        }
+      ]
+    },
+    "Food_and_Cooking": {
+      "description": "Human-curated recipes, cooking knowledge, and food culture",
+      "websites": [
+        {
+          "name": "AllRecipes",
+          "url": "https://www.allrecipes.com/",
+          "description": "Human-submitted and community-rated recipes",
+          "type": "recipe_community"
+        },
+        {
+          "name": "OpenStove",
+          "url": "https://openstove.org/",
+          "description": "Curated collection of ad-free, community-shared recipes",
+          "type": "open_recipe_community"
+        },
+        {
+          "name": "Food Hero",
+          "url": "https://foodhero.org/",
+          "description": "Community recipes for healthy, affordable meals",
+          "type": "community_recipes"
+        },
+        {
+          "name": "The Community Cookbook",
+          "url": "https://thecommunitycookbook.com/",
+          "description": "Community-approved recipes with weighted reputation system",
+          "type": "community_recipes"
+        },
+        {
+          "name": "Serious Eats",
+          "url": "https://www.seriouseats.com/",
+          "description": "Science-based food journalism and human-tested recipes",
+          "type": "food_journalism"
+        },
+        {
+          "name": "Kenji López-Alt's The Wok",
+          "url": "https://www.seriouseats.com/journalist/kenji-lopez-alt-48",
+          "description": "Science of cooking with tested recipes by food scientist",
+          "type": "food_science"
+        },
+        {
+          "name": "Cookpad",
+          "url": "https://cookpad.com/",
+          "description": "Global community recipe sharing platform",
+          "type": "recipe_community"
+        },
+        {
+          "name": "Ottolenghi Recipes (Guardian)",
+          "url": "https://www.theguardian.com/lifeandstyle/ottolenghi-recipes",
+          "description": "Human-written recipes by chef Yotam Ottolenghi",
+          "type": "chef_recipes"
+        },
+        {
+          "name": "Spoonacular",
+          "url": "https://spoonacular.com/",
+          "description": "Recipe search engine aggregating human-submitted recipes",
+          "type": "recipe_search"
+        },
+        {
+          "name": "Just One Cookbook",
+          "url": "https://www.justonecookbook.com/",
+          "description": "Japanese recipes by human food blogger",
+          "type": "cuisine_recipes"
+        }
+      ]
+    },
+    "DIY_Making_and_Crafts": {
+      "description": "Human-created tutorials, projects, and maker community knowledge",
+      "websites": [
+        {
+          "name": "Instructables",
+          "url": "https://www.instructables.com/",
+          "description": "Community for people who like to make things - DIY tutorials and projects",
+          "type": "diy_community"
+        },
+        {
+          "name": "LumberJocks",
+          "url": "https://www.lumberjocks.com/",
+          "description": "Woodworking community sharing projects, blogs, and videos",
+          "type": "woodworking_community"
+        },
+        {
+          "name": "Ravelry",
+          "url": "https://www.ravelry.com/",
+          "description": "Community for knitting, crocheting, weaving, and fiber arts",
+          "type": "fiber_arts_community"
+        },
+        {
+          "name": "Thingiverse",
+          "url": "https://www.thingiverse.com/",
+          "description": "Community for sharing 3D printable files and maker projects",
+          "type": "3d_printing_community"
+        },
+        {
+          "name": "Make: Magazine",
+          "url": "https://make.co/",
+          "description": "Human-created maker projects and tutorials",
+          "type": "maker_magazine"
+        },
+        {
+          "name": "WoodworkWeb",
+          "url": "https://www.woodworkweb.com/",
+          "description": "Woodworking community with tutorials, reviews, and project ideas",
+          "type": "woodworking_community"
+        },
+        {
+          "name": "HomeOwnersHub",
+          "url": "https://www.homeownershub.com/",
+          "description": "Community for home improvement questions and answers",
+          "type": "home_diy_community"
+        }
+      ]
+    },
+    "Home_and_Garden": {
+      "description": "Home improvement, gardening, and sustainable living knowledge",
+      "websites": [
+        {
+          "name": "Garden.org",
+          "url": "https://garden.org/",
+          "description": "Community gardening forums and knowledge sharing",
+          "type": "gardening_community"
+        },
+        {
+          "name": "Permies",
+          "url": "https://permies.com/",
+          "description": "Permaculture forums covering gardening, sustainability, and homesteading",
+          "type": "permaculture_community"
+        },
+        {
+          "name": "PermaWiki",
+          "url": "https://wiki.goperma.org/",
+          "description": "Permaculture plant knowledge - searchable plants, trees, fungi, and companions",
+          "type": "permaculture_wiki"
+        },
+        {
+          "name": "iNaturalist",
+          "url": "https://www.inaturalist.org/",
+          "description": "Community science platform for identifying and documenting plants and animals",
+          "type": "citizen_science_nature"
+        },
+        {
+          "name": "PlantNet",
+          "url": "https://plantnet.org/",
+          "description": "Community-driven plant identification and botanical knowledge",
+          "type": "plant_identification"
+        },
+        {
+          "name": "Old Farmer's Almanac",
+          "url": "https://www.almanac.com/",
+          "description": "Traditional gardening and weather wisdom since 1792",
+          "type": "traditional_knowledge"
+        },
+        {
+          "name": "eHow",
+          "url": "https://www.ehow.com/",
+          "description": "Human-written how-to guides for home and garden",
+          "type": "how_to"
+        },
+        {
+          "name": "Family Handyman",
+          "url": "https://www.familyhandyman.com/",
+          "description": "Human-written home improvement and repair guides",
+          "type": "home_improvement"
+        }
+      ]
+    },
+    "Music_and_Arts": {
+      "description": "Music knowledge, art collections, and creative arts resources",
+      "websites": [
+        {
+          "name": "IMSLP",
+          "url": "https://imslp.org/",
+          "description": "International Music Score Library Project - free public domain music scores",
+          "type": "music_scores"
+        },
+        {
+          "name": "Choral Public Domain Library (CPDL)",
+          "url": "https://www.cpdl.org/",
+          "description": "Free choral music scores and sheet music in the public domain",
+          "type": "choral_music"
+        },
+        {
+          "name": "Open Museum",
+          "url": "https://open-museum.art/",
+          "description": "Free open access to ten million works from the world's great museums",
+          "type": "open_art_collection"
+        },
+        {
+          "name": "Curationist",
+          "url": "https://www.curationist.org/",
+          "description": "Search 5.4 million images of works from open access museum collections",
+          "type": "art_aggregator"
+        },
+        {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/",
+          "description": "Free media repository with millions of human-created and documented images",
+          "type": "media_repository"
+        },
+        {
+          "name": "Metropolitan Museum of Art Open Access",
+          "url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+          "description": "Over 400,000 public domain images from The Met collection",
+          "type": "museum_open_access"
+        },
+        {
+          "name": "Rijksmuseum",
+          "url": "https://www.rijksmuseum.nl/en/rijksstudio",
+          "description": "Open access art from the Dutch national museum",
+          "type": "museum_open_access"
+        },
+        {
+          "name": "MuseScore",
+          "url": "https://musescore.com/",
+          "description": "Community-created sheet music and compositions",
+          "type": "sheet_music_community"
+        },
+        {
+          "name": "Musopen",
+          "url": "https://musopen.org/",
+          "description": "Free music education resources including public domain recordings and scores",
+          "type": "music_education"
+        },
+        {
+          "name": "My Open Museum",
+          "url": "https://myopenmuseum.com/",
+          "description": "Free art database bringing together artworks, artists, and museums worldwide",
+          "type": "art_database"
+        }
+      ]
+    },
+    "History_and_Culture": {
+      "description": "Historical knowledge, cultural heritage, and traditional wisdom",
+      "websites": [
+        {
+          "name": "UNESCO World Heritage",
+          "url": "https://whc.unesco.org/",
+          "description": "World Heritage sites and cultural heritage preservation",
+          "type": "cultural_heritage"
+        },
+        {
+          "name": "UNESCO Intangible Cultural Heritage",
+          "url": "https://ich.unesco.org/",
+          "description": "Intangible cultural heritage including oral traditions, performing arts, and rituals",
+          "type": "intangible_heritage"
+        },
+        {
+          "name": "Folklore Database",
+          "url": "https://folkloredatabase.com/",
+          "description": "200,000+ narratives covering mythology, legend, folktales, and sacred texts",
+          "type": "folklore_database"
+        },
+        {
+          "name": "Native-Languages.org",
+          "url": "https://www.native-languages.org/",
+          "description": "Native American languages and legends preserved by the community",
+          "type": "indigenous_knowledge"
+        },
+        {
+          "name": "Legends of America",
+          "url": "https://www.legendsofamerica.com/",
+          "description": "American history, legends, folklore, and cultural heritage",
+          "type": "american_folklore"
+        },
+        {
+          "name": "Fairytalez",
+          "url": "https://fairytalez.com/",
+          "description": "Fairy tales and folklore from cultures around the world",
+          "type": "fairy_tales"
+        },
+        {
+          "name": "Smithsonian Folklife",
+          "url": "https://folklife.si.edu/",
+          "description": "Cultural heritage and traditional knowledge from the Smithsonian",
+          "type": "cultural_heritage"
+        },
+        {
+          "name": "Digital Public Library of America",
+          "url": "https://dp.la/",
+          "description": "Free access to cultural heritage from America's libraries, archives, and museums",
+          "type": "cultural_archive"
+        },
+        {
+          "name": "Ancient History Encyclopedia",
+          "url": "https://www.worldhistory.org/",
+          "description": "Human-written articles on ancient history with peer review",
+          "type": "history_encyclopedia"
+        },
+        {
+          "name": "World History Encyclopedia",
+          "url": "https://www.worldhistory.org/",
+          "description": "Human-written and reviewed articles covering world history",
+          "type": "history_encyclopedia"
+        }
+      ]
+    },
+    "Language_and_Linguistics": {
+      "description": "Language learning, dictionaries, and linguistic knowledge",
+      "websites": [
+        {
+          "name": "Wiktionary",
+          "url": "https://www.wiktionary.org/",
+          "description": "Free multilingual dictionary collaboratively edited by volunteers",
+          "type": "wiki_dictionary"
+        },
+        {
+          "name": "Language Transfer",
+          "url": "https://www.languagetransfer.org/",
+          "description": "Free audio-based language learning created by humans, no AI",
+          "type": "language_courses"
+        },
+        {
+          "name": "Open Culture",
+          "url": "https://openculture.com/",
+          "description": "Free language courses from universities including Italian, Spanish, Chinese, and more",
+          "type": "free_language_courses"
+        },
+        {
+          "name": "Forvo",
+          "url": "https://forvo.com/",
+          "description": "Crowdsourced pronunciation dictionary with human-recorded pronunciations",
+          "type": "pronunciation_dictionary"
+        },
+        {
+          "name": "FreeDict",
+          "url": "https://freedict.org/",
+          "description": "Free multilingual dictionaries, volunteer-compiled",
+          "type": "open_dictionary"
+        },
+        {
+          "name": "Ethnologue",
+          "url": "https://www.ethnologue.com/",
+          "description": "Comprehensive reference work cataloging the world's living languages",
+          "type": "language_reference"
+        },
+        {
+          "name": "Omniglot",
+          "url": "https://www.omniglot.com/",
+          "description": "Writing systems and languages of the world",
+          "type": "writing_systems"
+        },
+        {
+          "name": "BBC Languages",
+          "url": "https://www.bbc.co.uk/languages",
+          "description": "Free language learning resources from BBC",
+          "type": "language_education"
+        },
+        {
+          "name": "Memrise",
+          "url": "https://www.memrise.com/",
+          "description": "Language learning with community-created courses",
+          "type": "language_community"
+        }
+      ]
+    },
+    "Philosophy_and_Ethics": {
+      "description": "Philosophical knowledge, ethics, and human thought",
+      "websites": [
+        {
+          "name": "Stanford Encyclopedia of Philosophy",
+          "url": "https://plato.stanford.edu/",
+          "description": "Expert-maintained, peer-reviewed online philosophy encyclopedia",
+          "type": "philosophy_reference"
+        },
+        {
+          "name": "Internet Encyclopedia of Philosophy",
+          "url": "https://iep.utm.edu/",
+          "description": "Free, peer-reviewed academic encyclopedia of philosophy",
+          "type": "philosophy_reference"
+        },
+        {
+          "name": "PhilPapers",
+          "url": "https://philpapers.org/",
+          "description": "Comprehensive index of philosophy books and articles maintained by the philosophy community",
+          "type": "philosophy_index"
+        },
+        {
+          "name": "PhilArchive",
+          "url": "https://philarchive.org/",
+          "description": "Open-access preprint archive for philosophy",
+          "type": "philosophy_archive"
+        },
+        {
+          "name": "Daily Nous",
+          "url": "https://dailynous.com/",
+          "description": "Philosophy news and discussion written by professional philosophers",
+          "type": "philosophy_news"
+        }
+      ]
+    },
+    "Government_and_Public_Domain_Data": {
+      "description": "Open government data, public domain works, and civic knowledge",
+      "websites": [
+        {
+          "name": "Data.gov",
+          "url": "https://data.gov/",
+          "description": "U.S. government open data portal",
+          "type": "gov_data"
+        },
+        {
+          "name": "Open Government Portal (Canada)",
+          "url": "https://open.canada.ca/",
+          "description": "Canadian government open data and information",
+          "type": "gov_data"
+        },
+        {
+          "name": "EU Open Data Portal",
+          "url": "https://data.europa.eu/",
+          "description": "European Union open data portal",
+          "type": "gov_data"
+        },
+        {
+          "name": "USGS ScienceBase",
+          "url": "https://www.sciencebase.gov/",
+          "description": "Open scientific data repository from USGS",
+          "type": "science_data"
+        },
+        {
+          "name": "Public.Resource.Org",
+          "url": "https://www.public.resource.org/",
+          "description": "Open access to law, regulation, and public government information",
+          "type": "public_interest"
+        },
+        {
+          "name": "GovTrack",
+          "url": "https://www.govtrack.us/",
+          "description": "Free tools to track the U.S. Congress and legislation",
+          "type": "civic_knowledge"
+        },
+        {
+          "name": "OpenSecrets",
+          "url": "https://www.opensecrets.org/",
+          "description": "Campaign finance data and lobbying records",
+          "type": "civic_data"
+        },
+        {
+          "name": "USA.gov",
+          "url": "https://www.usa.gov/",
+          "description": "Official U.S. government information and services",
+          "type": "gov_reference"
+        }
+      ]
+    },
+    "Astronomy_and_Space": {
+      "description": "Astronomy knowledge, space science, and stargazing resources",
+      "websites": [
+        {
+          "name": "NASA Astronomy Picture of the Day",
+          "url": "https://apod.nasa.gov/",
+          "description": "Daily curated astronomy image with human-written explanations",
+          "type": "astronomy_daily"
+        },
+        {
+          "name": "Sky & Telescope",
+          "url": "https://skyandtelescope.org/",
+          "description": "Human-written astronomy articles, star charts, and observing guides",
+          "type": "astronomy_magazine"
+        },
+        {
+          "name": "ViewSpace",
+          "url": "https://viewspace.org/",
+          "description": "Free astronomy and Earth science videos and interactives",
+          "type": "astronomy_education"
+        },
+        {
+          "name": "Stellarium Web",
+          "url": "https://stellarium-web.org/",
+          "description": "Free online planetarium using human-compiled star catalog data",
+          "type": "star_map"
+        },
+        {
+          "name": "Citizen Astronomer",
+          "url": "https://citizenastronomer.org/",
+          "description": "Community astronomy and space science outreach",
+          "type": "citizen_astronomy"
+        },
+        {
+          "name": "American Astronomical Society",
+          "url": "https://aas.org/",
+          "description": "Professional astronomy society with educational resources",
+          "type": "professional_astronomy"
+        },
+        {
+          "name": "Zooniverse (Galaxy Zoo)",
+          "url": "https://www.zooniverse.org/",
+          "description": "Citizen science projects where humans help classify galaxies and astronomical objects",
+          "type": "citizen_science"
+        }
+      ]
+    },
+    "Citizen_Science_and_Crowdsourced_Knowledge": {
+      "description": "Platforms where ordinary people contribute to scientific research and knowledge",
+      "websites": [
+        {
+          "name": "Zooniverse",
+          "url": "https://www.zooniverse.org/",
+          "description": "World's largest platform for people-powered research across disciplines",
+          "type": "citizen_science_platform"
+        },
+        {
+          "name": "iNaturalist",
+          "url": "https://www.inaturalist.org/",
+          "description": "Community science platform for identifying and cataloging biodiversity",
+          "type": "citizen_science_nature"
+        },
+        {
+          "name": "eBird",
+          "url": "https://ebird.org/",
+          "description": "Global bird observation database maintained by birdwatchers",
+          "type": "citizen_science_birding"
+        },
+        {
+          "name": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/",
+          "description": "Free, community-edited map of the world - the Wikipedia of maps",
+          "type": "crowdsourced_maps"
+        },
+        {
+          "name": "Foldit",
+          "url": "https://foldit.net/",
+          "description": "Crowdsourced protein folding game contributing to scientific research",
+          "type": "citizen_science_protein"
+        },
+        {
+          "name": "Galaxy Zoo",
+          "url": "https://www.galaxyzoo.org/",
+          "description": "Citizen science project where humans help classify galaxies",
+          "type": "citizen_science_astronomy"
+        },
+        {
+          "name": "Ushahidi",
+          "url": "https://www.ushahidi.com/",
+          "description": "Open-source crisis mapping platform powered by citizen reports",
+          "type": "citizen_reporting"
+        },
+        {
+          "name": "Wikivoyage",
+          "url": "https://www.wikivoyage.org/",
+          "description": "Free travel guide collaboratively edited by travelers worldwide",
+          "type": "travel_knowledge"
+        }
+      ]
+    },
+    "Outdoor_and_Survival": {
+      "description": "Outdoor skills, survival knowledge, and nature expertise",
+      "websites": [
+        {
+          "name": "Bushcraft 101 (Community Forums)",
+          "url": "https://www.survivalistboards.com/",
+          "description": "Community forums for outdoor survival and bushcraft knowledge",
+          "type": "survival_community"
+        },
+        {
+          "name": "Hammock Forums",
+          "url": "https://www.hammockforums.net/",
+          "description": "Community for hammock camping and outdoor knowledge",
+          "type": "outdoor_community"
+        },
+        {
+          "name": "REI Expert Advice",
+          "url": "https://www.rei.com/learn",
+          "description": "Human-written outdoor skill guides and gear knowledge",
+          "type": "outdoor_education"
+        },
+        {
+          "name": "Boy Scouts of America",
+          "url": "https://www.scouting.org/",
+          "description": "Traditional outdoor skills and character building knowledge",
+          "type": "outdoor_skills"
+        },
+        {
+          "name": "Mountain Project",
+          "url": "https://www.mountainproject.com/",
+          "description": "Community-built climbing guide with human-verified routes",
+          "type": "climbing_knowledge"
+        },
+        {
+          "name": "TrailLink",
+          "url": "https://www.traillink.com/",
+          "description": "Community-contributed trail information and reviews",
+          "type": "trail_knowledge"
+        }
+      ]
+    },
+    "Environment_and_Sustainability": {
+      "description": "Environmental science, sustainability practices, and conservation knowledge",
+      "websites": [
+        {
+          "name": "EPA",
+          "url": "https://www.epa.gov/",
+          "description": "Environmental Protection Agency - environmental science and policy information",
+          "type": "gov_environment"
+        },
+        {
+          "name": "Appropedia",
+          "url": "https://www.appropedia.org/",
+          "description": "Open-source sustainability wiki for appropriate technology",
+          "type": "sustainability_wiki"
+        },
+        {
+          "name": "Global Footprint Network",
+          "url": "https://www.footprintcalculator.org/",
+          "description": "Open data on ecological footprint and sustainability",
+          "type": "environmental_data"
+        },
+        {
+          "name": "IUCN Red List",
+          "url": "https://www.iucnredlist.org/",
+          "description": "Global conservation status of species maintained by expert network",
+          "type": "conservation_data"
+        },
+        {
+          "name": "FAO (Food and Agriculture Organization)",
+          "url": "https://www.fao.org/",
+          "description": "UN agency providing human knowledge on agriculture and food security",
+          "type": "agriculture_knowledge"
+        },
+        {
+          "name": "Our World in Data",
+          "url": "https://ourworldindata.org/",
+          "description": "Human-researched data and visualization on global environmental and social issues",
+          "type": "data_research"
+        }
+      ]
+    },
+    "Mathematics_and_Problem_Solving": {
+      "description": "Mathematical knowledge, problem-solving communities, and educational resources",
+      "websites": [
+        {
+          "name": "MathWorld",
+          "url": "https://mathworld.wolfram.com/",
+          "description": "Comprehensive mathematical reference by Eric Weisstein",
+          "type": "math_reference"
+        },
+        {
+          "name": "nLab",
+          "url": "https://ncatlab.org/nlab/",
+          "description": "Collaborative wiki for mathematics, physics, and philosophy",
+          "type": "math_wiki"
+        },
+        {
+          "name": "MathOverflow",
+          "url": "https://mathoverflow.net/",
+          "description": "Q&A for professional mathematicians",
+          "type": "math_qa"
+        },
+        {
+          "name": "Art of Problem Solving",
+          "url": "https://artofproblemsolving.com/",
+          "description": "Human-created math education community and problem-solving resources",
+          "type": "math_community"
+        },
+        {
+          "name": "OEIS",
+          "url": "https://oeis.org/",
+          "description": "Online Encyclopedia of Integer Sequences - human-curated mathematical database",
+          "type": "math_database"
+        },
+        {
+          "name": "Wolfram MathWorld",
+          "url": "https://mathworld.wolfram.com/",
+          "description": "Mathematical encyclopedia with comprehensive formulas and concepts",
+          "type": "math_encyclopedia"
+        },
+        {
+          "name": "Cut-the-Knot",
+          "url": "https://www.cut-the-knot.org/",
+          "description": "Interactive mathematics resource by Alexander Bogomolny",
+          "type": "math_interactive"
+        }
+      ]
+    },
+    "Weather_and_Earth_Science": {
+      "description": "Weather data, earth science knowledge, and geoscience",
+      "websites": [
+        {
+          "name": "NOAA",
+          "url": "https://www.noaa.gov/",
+          "description": "National Oceanic and Atmospheric Administration - weather and climate data",
+          "type": "weather_data"
+        },
+        {
+          "name": "Weather Underground (Wunderground)",
+          "url": "https://www.wunderground.com/",
+          "description": "Weather data from personal weather stations and community reports",
+          "type": "weather_community"
+        },
+        {
+          "name": "Earthquake Hazards Program (USGS)",
+          "url": "https://earthquake.usgs.gov/",
+          "description": "Real-time earthquake data and seismological research from USGS",
+          "type": "seismology"
+        },
+        {
+          "name": "NASA Earth Observatory",
+          "url": "https://earthobservatory.nasa.gov/",
+          "description": "Earth science imagery and research from NASA",
+          "type": "earth_science"
+        },
+        {
+          "name": "OpenWeatherMap",
+          "url": "https://openweathermap.org/",
+          "description": "Free weather data API with community weather information",
+          "type": "open_weather_data"
+        },
+        {
+          "name": "Windy",
+          "url": "https://www.windy.com/",
+          "description": "Community weather visualization platform",
+          "type": "weather_visualization"
+        }
+      ]
+    },
+    "Sports_and_Physical_Knowledge": {
+      "description": "Sports training, exercise science, and physical education knowledge",
+      "websites": [
+        {
+          "name": "ExRx",
+          "url": "https://exrx.net/",
+          "description": "Free human-written exercise reference and exercise science resource",
+          "type": "exercise_reference"
+        },
+        {
+          "name": "NASM Blog",
+          "url": "https://www.nasm.org/resources",
+          "description": "Exercise science and human performance knowledge from NASM",
+          "type": "exercise_science"
+        },
+        {
+          "name": "Olympics.com",
+          "url": "https://olympics.com/",
+          "description": "Official Olympic knowledge, athlete stories, and sports history",
+          "type": "sports_education"
+        },
+        {
+          "name": "Runner's World",
+          "url": "https://www.runnersworld.com/",
+          "description": "Human-written running knowledge, training plans, and nutrition",
+          "type": "running_knowledge"
+        },
+        {
+          "name": "Starting Strength",
+          "url": "https://startingstrength.com/",
+          "description": "Human-written strength training methodology and knowledge",
+          "type": "strength_training"
+        },
+        {
+          "name": "Stronger by Science",
+          "url": "https://www.strongerbyscience.com/",
+          "description": "Evidence-based exercise science knowledge by Greg Nuckols",
+          "type": "exercise_science"
+        }
+      ]
+    },
+    "Parenting_and_Family": {
+      "description": "Human knowledge about parenting, child development, and family life",
+      "websites": [
+        {
+          "name": "HealthyChildren.org",
+          "url": "https://www.healthychildren.org/",
+          "description": "Parenting information from the American Academy of Pediatrics",
+          "type": "parenting_reference"
+        },
+        {
+          "name": "What to Expect",
+          "url": "https://www.whattoexpect.com/",
+          "description": "Human-written pregnancy and parenting information",
+          "type": "pregnancy_parenting"
+        },
+        {
+          "name": "Zero to Three",
+          "url": "https://www.zerotothree.org/",
+          "description": "Evidence-based early childhood development knowledge",
+          "type": "child_development"
+        },
+        {
+          "name": "Parenting Science",
+          "url": "https://parentingscience.com/",
+          "description": "Science-based parenting information by a science writer",
+          "type": "science_parenting"
+        }
+      ]
+    },
+    "Business_and_Economics": {
+      "description": "Business knowledge, economics research, and entrepreneurship resources",
+      "websites": [
+        {
+          "name": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "description": "Human-written management and business strategy articles",
+          "type": "business_review"
+        },
+        {
+          "name": "FRED (Federal Reserve Economic Data)",
+          "url": "https://fred.stlouisfed.org/",
+          "description": "Free economic data from the Federal Reserve Bank of St. Louis",
+          "type": "economic_data"
+        },
+        {
+          "name": "Investopedia",
+          "url": "https://www.investopedia.com/",
+          "description": "Human-written financial education and market knowledge",
+          "type": "finance_education"
+        },
+        {
+          "name": "World Bank Open Data",
+          "url": "https://data.worldbank.org/",
+          "description": "Free and open access to global development data",
+          "type": "development_data"
+        },
+        {
+          "name": "Our World in Data",
+          "url": "https://ourworldindata.org/",
+          "description": "Research and data to make progress against global problems",
+          "type": "global_data"
+        },
+        {
+          "name": "Khan Academy - Finance",
+          "url": "https://www.khanacademy.org/economics-finance-domain",
+          "description": "Free economics and finance education",
+          "type": "free_economics"
+        }
+      ]
+    },
+    "Psychology_and_Human_Behavior": {
+      "description": "Psychology knowledge, mental health resources, and human behavior research",
+      "websites": [
+        {
+          "name": "Psychology Today",
+          "url": "https://www.psychologytoday.com/",
+          "description": "Human-written psychology articles and therapist directory",
+          "type": "psychology_magazine"
+        },
+        {
+          "name": "APA (American Psychological Association)",
+          "url": "https://www.apa.org/",
+          "description": "Professional psychology organization with educational resources",
+          "type": "professional_psychology"
+        },
+        {
+          "name": "Very Well Mind",
+          "url": "https://www.verywellmind.com/",
+          "description": "Human-written mental health and psychology information",
+          "type": "mental_health"
+        },
+        {
+          "name": "Mental Health Foundation",
+          "url": "https://www.mentalhealth.org.uk/",
+          "description": "Free mental health information and resources from the UK",
+          "type": "mental_health"
+        },
+        {
+          "name": "Psych Central",
+          "url": "https://psychcentral.com/",
+          "description": "Human-reviewed mental health information",
+          "type": "mental_health"
+        }
+      ]
+    },
+    "Engineering_and_Technology": {
+      "description": "Engineering knowledge, technical references, and technology education",
+      "websites": [
+        {
+          "name": "MIT OpenCourseWare - Engineering",
+          "url": "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/",
+          "description": "Free engineering course materials from MIT",
+          "type": "engineering_education"
+        },
+        {
+          "name": "All About Circuits",
+          "url": "https://www.allaboutcircuits.com/",
+          "description": "Free electronics engineering textbook and community",
+          "type": "electronics_education"
+        },
+        {
+          "name": "EEVblog",
+          "url": "https://www.eevblog.com/",
+          "description": "Human-created electronics engineering blog and video tutorials",
+          "type": "electronics_community"
+        },
+        {
+          "name": "Engineering ToolBox",
+          "url": "https://www.engineeringtoolbox.com/",
+          "description": "Reference data and tools for engineering professionals",
+          "type": "engineering_reference"
+        },
+        {
+          "name": "Open Source Hardware Association",
+          "url": "https://www.oshwa.org/",
+          "description": "Open source hardware knowledge and community",
+          "type": "hardware_community"
+        },
+        {
+          "name": "Hackster.io",
+          "url": "https://www.hackster.io/",
+          "description": "Community for hardware hackers and maker projects",
+          "type": "maker_community"
+        }
+      ]
+    },
+    "Travel_and_Geography": {
+      "description": "Human travel knowledge, geography, and exploration resources",
+      "websites": [
+        {
+          "name": "Wikivoyage",
+          "url": "https://www.wikivoyage.org/",
+          "description": "Free, human-edited travel guide - the travel wiki",
+          "type": "travel_wiki"
+        },
+        {
+          "name": "Lonely Planet",
+          "url": "https://www.lonelyplanet.com/",
+          "description": "Human-written travel guides and destination knowledge",
+          "type": "travel_guides"
+        },
+        {
+          "name": "Atlas Obscura",
+          "url": "https://www.atlasobscura.com/",
+          "description": "Human-curated database of unusual and hidden places",
+          "type": "curated_atlas"
+        },
+        {
+          "name": "Google Earth",
+          "url": "https://earth.google.com/",
+          "description": "Geographic knowledge through satellite imagery and terrain data",
+          "type": "geographic_tool"
+        },
+        {
+          "name": "National Geographic",
+          "url": "https://www.nationalgeographic.com/",
+          "description": "Human journalism and photography about geography, nature, and culture",
+          "type": "geography_magazine"
+        },
+        {
+          "name": "GeoNames",
+          "url": "https://www.geonames.org/",
+          "description": "Free geographical database covering all countries",
+          "type": "geographic_database"
+        }
+      ]
+    },
+    "Religion_and_Spirituality": {
+      "description": "Religious knowledge, spiritual traditions, and theological scholarship",
+      "websites": [
+        {
+          "name": "Bible Gateway",
+          "url": "https://www.biblegateway.com/",
+          "description": "Free Bible text in multiple translations and languages",
+          "type": "scripture_reference"
+        },
+        {
+          "name": "Sacred Texts",
+          "url": "https://sacred-texts.com/",
+          "description": "Free library of sacred texts from world religions",
+          "type": "sacred_texts"
+        },
+        {
+          "name": "Internet Sacred Text Archive",
+          "url": "https://sacred-texts.com/",
+          "description": "Free access to the largest freely available archive of books on religion and mythology",
+          "type": "religion_archive"
+        },
+        {
+          "name": "Stanford Encyclopedia of Philosophy - Religion",
+          "url": "https://plato.stanford.edu/entries/philosophy-religion/",
+          "description": "Scholarly philosophy of religion articles",
+          "type": "philosophy_religion"
+        },
+        {
+          "name": "Patheos",
+          "url": "https://www.patheos.com/",
+          "description": "Multi-faith dialogue and religious knowledge platform",
+          "type": "interfaith_knowledge"
+        }
+      ]
+    },
+    "Social_Science_and_Anthropology": {
+      "description": "Human knowledge about societies, cultures, and human behavior",
+      "websites": [
+        {
+          "name": "Pew Research Center",
+          "url": "https://www.pewresearch.org/",
+          "description": "Non-partisan human research on social issues, demographics, and trends",
+          "type": "social_research"
+        },
+        {
+          "name": "Our World in Data",
+          "url": "https://ourworldindata.org/",
+          "description": "Empirical research on global social science topics",
+          "type": "social_data"
+        },
+        {
+          "name": "JSTOR",
+          "url": "https://www.jstor.org/",
+          "description": "Digital library of academic journals, books, and primary sources",
+          "type": "academic_archive"
+        },
+        {
+          "name": "Max Planck Institute for Social Anthropology",
+          "url": "https://www.eth.mpg.de/",
+          "description": "Research on social and cultural diversity",
+          "type": "anthropology_research"
+        },
+        {
+          "name": "SAPIENS",
+          "url": "https://www.sapiens.org/",
+          "description": "Human-curated anthropology publication",
+          "type": "anthropology_magazine"
+        }
+      ]
+    }
+  },
+  "total_websites": 250,
+  "categories_count": 30,
+  "notes": [
+    "All listed websites are human-created, human-curated, or community-driven knowledge sources",
+    "Focus on non-profit, open access, and community-supported platforms",
+    "Includes open educational resources, citizen science, and traditional knowledge",
+    "Excludes AI-generated content platforms and AI-dependent services",
+    "Covers every major domain of human knowledge from science to arts to practical skills"
+  ]
+}
